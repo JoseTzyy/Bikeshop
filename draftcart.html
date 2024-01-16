@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Test by osias</title>
+</head>
+<body>
+
+<h1>Product Name Hentai</h1>
+<p>Price: ₱200000000.00</p>
+<button onclick="addToCart()">Add to Cart</button>
+
+<div id="cart">
+    <h2>Shopping Cart ng gagong ito</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="checkout()">Checkout</button>
+</div>
+
+<script>
+    function addToCart() {
+        // Get product details (you can fetch these dynamically)
+        const productName = "Product Name";
+        const productPricePHP = 2000000000.00;
+
+        // Create a new cart item
+        const cartItem = document.createElement("li");
+        cartItem.textContent = `${productName} - ₱${productPricePHP.toFixed(2)}`;
+
+        // Add the item to the cart
+        document.getElementById("cart-items").appendChild(cartItem);
+    }
+
+    function checkout() {
+        // Display a confirmation message (you can handle payment and other details here)
+        alert("Thank you for your purchase! Your items have been added to delivery.");
+
+        // Clear the cart
+        document.getElementById("cart-items").innerHTML = "";
+    }
+</script>
+
+</body>
+</html>
